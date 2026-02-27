@@ -92,9 +92,11 @@ class AdjacencyMatrixGraph(Graph):
 
     def display(self) -> None:
         """Prints the whole graph."""
+        print("\nAdjacency List View:")
+
         for i in range(self.num_vertices):
-            for v in self.get_adjacent_vertices(i):
-                print(i, "--->", v)
+            neighbors = self.get_adjacent_vertices(i)
+            print(f"{i} -> {neighbors}")
 
 
 # ============================
